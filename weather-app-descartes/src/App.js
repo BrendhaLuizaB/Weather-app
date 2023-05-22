@@ -13,7 +13,7 @@ import {
 } from "./components/Styles/App/app.styled";
 
 function App() {
-  const [query, setQuery] = useState({ q: "berlin" });
+  const [query, setQuery] = useState({ q: "brasil" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -24,10 +24,6 @@ function App() {
       toast.info("Fetching weather for " + message);
 
       await getFormattedWeatherData({ ...query, units }).then((data) => {
-        toast.success(
-          `Successfully fetched weather for ${data.name}, ${data.country}.`
-        );
-
         setWeather(data);
       });
     };
@@ -42,7 +38,7 @@ function App() {
         justifyContent: "center",
       }}
     >
-      <Container style={{ marginTop: "5rem" }}>
+      <Container>
         <ContainerInput>
           <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
         </ContainerInput>

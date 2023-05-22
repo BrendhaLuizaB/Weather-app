@@ -8,6 +8,7 @@ export const Container = styled.div`
   backdrop-filter: blur(5.9px);
   -webkit-backdrop-filter: blur(5.9px);
   border-radius: 8px;
+  margin: 5rem 0 5rem 0;
 `;
 export const ContainerApp = styled.div`
   background: url(${ocean}) no-repeat center center/cover;
